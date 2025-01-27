@@ -191,15 +191,7 @@
     <hr size="10%" width="100%"/>
     <p><h1>Thank you for visiting my portfolio website! </h1></p>      
 
-    <script>
-        // Increment local page count
-        if (localStorage.pagecount) {
-            localStorage.pagecount = Number(localStorage.pagecount) + 1;
-        } else {
-            localStorage.pagecount = 1;
-        }
-        document.write("<p align='center'>You have visited this page " + localStorage.pagecount + " times.</p>");
-
+    <script>        
         // Increment total visit count
         fetch('visit_count.txt')
             .then(response => response.text())
