@@ -241,5 +241,23 @@
     </table>    
     <hr size="10%" width="100%"/>
     <p><h1>Thank you for visiting my portfolio website! </h1></p>      
+
+    <script>
+        // Increment local page count
+        if (localStorage.pagecount) {
+            localStorage.pagecount = Number(localStorage.pagecount) + 1;
+        } else {
+            localStorage.pagecount = 1;
+        }
+        document.write("<p align='center'>You have visited this page " + localStorage.pagecount + " times.</p>");
+
+        // Increment total visit count
+        fetch('https://dadapesrg.github.io/increment-visit-count')
+            .then(response => response.json())
+            .then(data => {
+                document.write("<p align='center'>Total visits: " + data.total_visits + "</p>");
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
 </body>
 </html>
