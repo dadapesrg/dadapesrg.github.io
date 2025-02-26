@@ -209,34 +209,5 @@
     </table>    
     <hr size="10%" width="100%"/>
     <p><h1>Thank you for visiting my portfolio website! </h1></p>  
-    <p>You are visitor number: <span id="visitor-count">0</span></p>
-
-    <script>
-        // Check if localStorage is supported
-        if (typeof(Storage) !== "undefined") {
-            // Get the current visitor count from localStorage
-            let visitorCount = localStorage.getItem('visitorCount');
-
-            // If no count exists, initialize it to 0
-            if (visitorCount === null) {
-                visitorCount = 0;
-            } else {
-                // Convert the count to a number
-                visitorCount = parseInt(visitorCount, 10);
-            }
-
-            // Increment the visitor count
-            visitorCount++;
-
-            // Store the updated count back in localStorage
-            localStorage.setItem('visitorCount', visitorCount);
-
-            // Display the visitor count on the page
-            document.getElementById('visitor-count').textContent = visitorCount;
-        } else {
-            // If localStorage is not supported, display an error message
-            document.getElementById('visitor-count').textContent = "LocalStorage not supported";
-        }
-    </script>
 </body>
 </html>
